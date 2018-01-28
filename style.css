@@ -393,7 +393,8 @@ body {
   background-color: #171750;
   padding: 2rem 3rem;
   font-size: 2rem;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  z-index: 1000; }
   .nav a {
     color: white; }
   .nav__item {
@@ -430,33 +431,38 @@ body {
     transition: 0s; }
   .nav__input {
     display: none; }
-  .nav label {
-    display: inline-block;
+  .nav__button {
     width: 2.2rem;
-    position: absolute;
-    top: 2rem;
+    top: 1rem;
     background-color: #fff;
     height: 2px;
-    left: 1.5rem; }
-    .nav label::before {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: #fff;
-      height: 2px;
-      width: 2.2rem;
-      top: .8rem; }
-    .nav label::after {
-      content: "";
-      display: block;
-      position: absolute;
-      background-color: #fff;
-      height: 2px;
-      width: 2.2rem;
-      bottom: .8rem; }
+    left: 1rem;
+    height: 2.2rem;
+    position: fixed;
+    border-radius: 2px;
+    z-index: 2000;
+    text-align: center;
+    cursor: pointer; }
     @media only screen and (min-width: 37.5em) {
-      .nav label {
+      .nav__button {
         display: none; } }
+  .nav__icon {
+    position: relative;
+    margin-top: 1rem; }
+    .nav__icon, .nav__icon::before, .nav__icon::after {
+      width: 1.8rem;
+      height: 2px;
+      background-color: #333;
+      display: inline-block; }
+    .nav__icon::before, .nav__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .nav__icon::before {
+      top: .5rem; }
+    .nav__icon::after {
+      bottom: .5rem; }
 
 #logo {
   float: left; }
@@ -465,20 +471,27 @@ body {
       display: none; } }
 
 @media (max-width: 37.5em) {
-  label {
+  .nav__button {
     display: block;
     cursor: pointer; }
   .nav__list {
     text-align: center;
     width: 100%;
     display: none;
-    opacity: 0;
-    transition: all .2s; }
+    opacity: 0; }
   .nav__item {
     display: block;
     float: none; }
     .nav__item:not(:last-child) {
       margin-bottom: 1.5rem; }
-  .nav__input:checked + .nav__list {
+  .nav__input:checked ~ .nav__list {
     display: block;
-    opacity: 1; } }
+    opacity: 1; }
+  .nav__input:checked + .nav__button .nav__icon {
+    background-color: transparent; }
+  .nav__input:checked + .nav__button .nav__icon::after {
+    top: 0;
+    transform: rotate(135deg); }
+  .nav__input:checked + .nav__button .nav__icon::before {
+    top: 0;
+    transform: rotate(-135deg); } }
