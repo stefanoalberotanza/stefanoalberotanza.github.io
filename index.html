@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+    <title>Stefano Alberotanza</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="/font/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__image-box">
+            <img src="img/me_sito_medium.png" alt="my_photo" class="header__image">
+        </div>
+        <div class="header__text-box">
+            <h1 class="heading-primary header__heading-primary clip-text">I'm Stefano Alberotanza. I like biscuits a lot.</h1>
+            <a href="#" class="btn btn--animated--blue btn--center-horizontal btn--animated text-dark-1">Read more &darr;</a>
+        </div>
+    </header>
+    <main>
+        <section class="section-skills">
+            <div class="row">
+                <div class="col-1-of-4">
+                    <div class="skill skill--1 u-margin-top-small">
+                        <i class="devicon-html5-plain clip-text skill__icon "></i>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="skill skill--2 u-margin-top-small">
+                        <i class="devicon-css3-plain clip-text skill__icon "></i>
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="skill skill--3 u-margin-top-small">
+                        <i class="devicon-javascript-plain clip-text skill__icon"></i>   
+                    </div>
+                </div>
+                <div class="col-1-of-4">
+                    <div class="skill skill--4 u-margin-top-small">        
+                        <i class="devicon-python-plain clip-text skill__icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-works">
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="works__container">
+                        <div class="works__image-box">
+                            <img src="img/ticTacToe.PNG" alt="project-1" class="works__image">
+                        </div>
+                        <div class="works__description">
+                            <h3 class="heading-tertiary u-margin-top-small works__heading-tertiary">Tic Tac Toe</h3>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-1-of-3">
+                    <div class="works__container">
+                        <div class="works__image-box">
+                            <img src="img/wikipediaViewer.PNG" alt="project-1" class="works__image">
+                        </div>
+                        <div class="works__description">
+                            <h3 class="heading-tertiary u-margin-top-small works__heading-tertiary">Wikipedia Viewer</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="works__container">
+                        <div class="works__image-box">
+                            <img src="img/ticTacToe.PNG" alt="project-1" class="works__image">
+                        </div>
+                        <div class="works__description">
+                            <h3 class="heading-tertiary u-margin-top-small works__heading-tertiary">Third Project</h3>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="about">
+        <div class="row ">
+            <div class="col-1-of-2 about__left">
+                <div class="about__image"></div>
+            </div>
+            <div class="col-1-of-2">
+                <div class="about__text"><h1 class="about__description"> I'm an <span class="about__span--italian">italian</span> student, junior front-end developer. I like travel, biscuits and <span class="about__span--swim">swim!</span></h1></div>
+            </div>
+        </div>
+        </section>
+        <section class="section-contact">
+            <div class="row">
+                <div class="col-1-of-2 form">
+                    <div class="form__group">
+                        <input type="email" class="form__input" placeholder="Email address" id="email" required>
+                        <label for="email" class="form__label">Email</label> 
+                    </div>
+                    <div class="form__group">
+                        <textarea name="text" id="text" cols="30" rows="10" placeholder="Text here"></textarea>
+                        <label for="text" class="form__label" >Text</label>
+                    </div>
+                    <a href="#" class="btn btn--animated--grey btn--center-horizontal btn--animated text-dark-1 contact__btn">Send me</a>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="contact__text-box">
+                        <h1 class="contact__text clip-text">
+                            Feel free to conctact me!
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__item">
+                <i class="social fa fa-twitter"></i>
+            </li>
+            <li class="footer__item">
+                <i class="social fa fa-facebook-square"></i>
+            </li>
+            <li class="footer__item">
+                <i class="social fa fa-instagram"></i>
+            </li>
+            <li class="footer__item">
+                <i class="social fa fa-codepen"></i>
+            </li>
+            <li class="footer__item">
+                <i class="social fa fa-free-code-camp"></i>
+            </li>
+        </ul>
+        <p class="footer__par">Made by Stefano Alberotanza with <a href="" class="footer__link">Guccini's song</a> with the help of this <a href="https://www.udemy.com/advanced-css-and-sass/learn/v4/overview" target="_blank" class="footer__link">course</a></p>
+    </footer>
+    <nav class="nav">
+        <ul class="nav__list">
+            <il class="nav__item" id = "logo">Stefano Alberotanza</il>
+            <il class="nav__item"><a href="#" class="nav__btn nav__btn--skills btn">SKILLS</a></il>
+            <il class="nav__item"><a href="#" class="nav__btn nav__btn--works btn">WORKS</a></il>
+            <il class="nav__item"><a href="#" class="nav__btn nav__btn--about btn">ABOUT ME</a></il>
+            <il class="nav__item"><a href="#" class="nav__btn nav__btn--contact btn">CONTACT</a></il>
+        </ul>
+    </nav>
+</body>
+</html>
