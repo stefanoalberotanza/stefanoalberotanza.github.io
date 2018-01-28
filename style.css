@@ -165,6 +165,9 @@ body {
   position: relative;
   background-color: orangered;
   top: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      top: 0; } }
   .header__image-box {
     display: inline-block;
     height: 100%;
@@ -277,7 +280,8 @@ body {
       position: absolute; } }
   .about__image {
     background-color: red;
-    height: 35rem; }
+    height: 35rem;
+    opacity: 0; }
   .about__description {
     width: 90%;
     margin: 0 auto;
@@ -424,6 +428,57 @@ body {
     background: transparent;
     width: calc(100% - 1rem);
     transition: 0s; }
+  .nav__input {
+    display: none; }
+  .nav label {
+    display: inline-block;
+    width: 2.2rem;
+    position: absolute;
+    top: 2rem;
+    background-color: #fff;
+    height: 2px;
+    left: 1.5rem; }
+    .nav label::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #fff;
+      height: 2px;
+      width: 2.2rem;
+      top: .8rem; }
+    .nav label::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #fff;
+      height: 2px;
+      width: 2.2rem;
+      bottom: .8rem; }
+    @media only screen and (min-width: 37.5em) {
+      .nav label {
+        display: none; } }
 
 #logo {
   float: left; }
+  @media (max-width: 37.5em) {
+    #logo {
+      display: none; } }
+
+@media (max-width: 37.5em) {
+  label {
+    display: block;
+    cursor: pointer; }
+  .nav__list {
+    text-align: center;
+    width: 100%;
+    display: none;
+    opacity: 0;
+    transition: all .2s; }
+  .nav__item {
+    display: block;
+    float: none; }
+    .nav__item:not(:last-child) {
+      margin-bottom: 1.5rem; }
+  .nav__input:checked + .nav__list {
+    display: block;
+    opacity: 1; } }
